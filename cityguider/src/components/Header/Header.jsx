@@ -33,7 +33,7 @@ const Header = ({ setCoordinates, weatherData, coordinates}) => {
     
 
     return (
-        <AppBar position="static" color='black'>
+        <AppBar position="static">
             <Toolbar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.title}>
                     City Guider
@@ -41,22 +41,22 @@ const Header = ({ setCoordinates, weatherData, coordinates}) => {
 
                 { weatherData.location ? 
                 <>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     Current Place: {weatherData.location.name}
                 </Typography>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     Current Temperature: {weatherData.current.temp_c}°C || Feels Like: {weatherData.current.feelslike_c}°C 
                 </Typography>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     <img height={50} src={`https:${weatherData.current.condition.icon}`}></img>
                 </Typography>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     Humidity: {weatherData.current.humidity}% UV: {weatherData.current.uv}
                 </Typography>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     Tomorrow's Temperature: {weatherData.forecast.forecastday[0].day.avgtemp_c}°C
                 </Typography>
-                <Typography variant="h8" className={classes.title}>
+                <Typography variant="h8" className={classes.subTitle}>
                     Tomorrow's Condition: {weatherData.forecast.forecastday[0].day.condition.text}
                 </Typography>
                 

@@ -2,10 +2,17 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   title: {
-    display: 'none',
+    display: 'flex',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+  },
+  subTitle: {
+    display: 'flex',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+    fontSize: '12px'
   },
   search: {
     position: 'relative',
