@@ -9,8 +9,6 @@ import useStyles from './styles';
 const Header = ({ setCoordinates, weatherData, coordinates}) => {
     const classes = useStyles();
     const [autocomplete, setAutoComplete] = useState(null);
-    // const [weatherData, setWeatherData] = useState({});
-    // const [localCoordinates, setLocalCoordinates] = useState({});
 
     const onLoad = (autoC) => setAutoComplete(autoC);
 
@@ -20,17 +18,7 @@ const Header = ({ setCoordinates, weatherData, coordinates}) => {
 
         setCoordinates({ lat, lng });
     }
-    
-    // useEffect(() => {
-
-    //     getWeatherData(coordinates.lat + ',' + coordinates.lng)
-    //     .then((response) => response)
-    //     .then((data) => {setWeatherData(data);
-    //     });
-
-    // },[coordinates])
-
-    
+        
 
     return (
         <AppBar position="static">
