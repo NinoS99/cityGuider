@@ -21,7 +21,7 @@ const Header = ({ setCoordinates, weatherData, coordinates}) => {
         
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" style={{ background: 'grey' }}>
             <Toolbar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.title}>
                     City Guider
